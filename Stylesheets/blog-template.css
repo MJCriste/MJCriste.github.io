@@ -1,0 +1,49 @@
+body {
+	background-color: green;
+}
+
+.MainContainer {
+	width: 90%;
+	max-width: 1080px;
+	border: solid black 18px;
+	margin: 0 auto;
+
+}
+
+.Header {
+width: 100%;
+height: 60px;
+margin-top: -12px;
+margin-bottom: 16px;
+}
+
+.Sidebar {
+	width: 30%;
+	float: left;
+}
+
+.Sidebar ul {
+	list-style-type: none;
+}
+
+.Clear {
+	clear: both;
+}
+
+.BlogContent {
+	float: right;
+	width: 70%;
+}
+
+.BlogContent img {
+	width: 65%;
+	height: auto;
+	border: gray solid 10px;
+}
+
+.Header h2 {
+	font-family: Courier;
+	padding-left: 3%;
+	font-size: 45px;
+	padding-top: -35px;
+}
