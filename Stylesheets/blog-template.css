@@ -1,5 +1,5 @@
 body {
-	background-color: green;
+	background-color: #008248;
 }
 
 .MainContainer {
@@ -24,6 +24,7 @@ margin-bottom: 16px;
 
 .Sidebar ul {
 	list-style-type: none;
+	color: FF0000;
 }
 
 .Clear {
@@ -46,4 +47,8 @@ margin-bottom: 16px;
 	padding-left: 3%;
 	font-size: 45px;
 	padding-top: -35px;
+}
+
+a {
+	color: FF0000;
 }

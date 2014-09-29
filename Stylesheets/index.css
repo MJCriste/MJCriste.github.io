@@ -1,0 +1,25 @@
+table {
+	padding-left:50px;
+}
+
+title {
+	float: right;
+}
+
+a: nth-child(1) {
+	width: 50px;
+	height: auto;
+}
+
+a {
+	color: green;
+	float: bottom;
+}
+
+.blogs {
+	float: bottom;
+}
+
+img {
+	postion: center;
+}
