@@ -51,3 +51,19 @@ margin-bottom: 16px;
 a {
 	color: #FF0000;
 }
+
+div.BoxModel {
+	padding-right: 15px;
+	padding-bottom: 190px;
+	float: right;
+	margin-bottom: 200px;	
+}
+
+div.BlogContent {
+	padding-left: 0px;
+}
+
+div.SampleCode {
+	padding-left: 15px;
+
+}

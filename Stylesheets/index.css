@@ -20,6 +20,39 @@ a {
 	float: bottom;
 }
 
-img {
-	postion: center;
+a img {
+	width: 250px;
+	height: auto;
+	padding: 0 0 10px 10px;
+}
+
+body {
+	width: 1080px;
+	margin: 0px auto;
+}
+
+div {
+	width: 100%;
+}
+
+.left {
+	width: 400px;
+	float: left;
+}
+
+.center {
+	width: 400px;
+	float: left;
+}
+.right {
+	width: 100px;
+	float: right;
+}
+
+.title {
+	height: 45px;
+}
+
+.blogs {
+	margin-top: 20px;
 }
