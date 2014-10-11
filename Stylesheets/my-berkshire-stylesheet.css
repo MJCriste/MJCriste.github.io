@@ -1,0 +1,42 @@
+html {
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+  color: #000080;
+
+}
+
+table {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 15px 0;
+	width: 100%;
+}
+
+li {
+	padding-bottom: 23px;
+	padding-left: 50px;
+}
+
+a {
+	color: #800080;
+}
+
+a:link {
+	color: #800080;
+}
+
+a:visited {
+	color: #FF0000;
+}
+
+ul {
+	width: 1080px;
+	background-color: green;
+}
+
+/*Text: #000080 (navy)
+Links: #800080 (purple)
+Visited links : #ff0000 (red)
+background: #ffffff (white)*/
+

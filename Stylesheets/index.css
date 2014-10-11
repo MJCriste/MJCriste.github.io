@@ -56,3 +56,15 @@ div {
 .blogs {
 	margin-top: 20px;
 }
+
+.secondleft {
+	width: 400px;
+	float: left;
+	padding-top: 15px;
+}
+
+.secondcenter {
+	width: 400px;
+	float: left;
+	padding-top: 15px;
+}
