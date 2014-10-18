@@ -1,5 +1,5 @@
-Michael Criste; Technical Blog
-Getting Up and Running with Git and Github
+Michael Criste; Cultural Blog
+Introduction to the Dev Bootcamp Culture
 
 9-20-14
 
