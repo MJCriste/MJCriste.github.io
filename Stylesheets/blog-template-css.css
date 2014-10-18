@@ -52,18 +52,21 @@ a {
 	color: #FF0000;
 }
 
-div.BoxModel {
-	padding-right: 15px;
-	padding-bottom: 190px;
-	float: right;
-	margin-bottom: 	
-}
-
 div.BlogContent {
 	padding-left: 0px;
 }
 
 div.SampleCode {
 	padding-left: 15px;
+	padding-top: 50px;
+	width: 85%;
+	height: auto;
+}
 
+div.BoxModel img {
+	width: 35%;
+	height: auto;
+	float: right;
+	margin-bottom: 230px;
+	padding-right: 25px;
 }
