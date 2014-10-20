@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Binary World</title>
+	<link rel="stylesheet" type="text/css" href="../Stylesheets/blog-template.css"/>
+</head>
+<body>
+<div class="MainContainer">
+	<div class="Header">
+		<h2>Binary World</h2>
+		<div class="SocialMedia"></div>
+	</div>
+	<div class="Sidebar">
+		<ul>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+			<li><a href="">placeholdertext</a></li>
+
+		</ul>
+	</div>
+	<div class="BlogContent">
+		<img src="images/imgres.jpg"/>
+		<p>
+<strong><h3>Enumerable Method - . map (aka . collect)</h3></strong>
+
+<p>The method ". map" is a collection operation used to iterate through a block of data, allow the block to apply its changes to the inputed data, then disperses the data into an organized list called an array.</p>
+
+<p>An example is as follows:</p>
+
+<p>(1 . . 4). map { | i | i * i }   ===> [1, 4, 8, 16]</p>
+
+<p>This shows that a range from 1 to 4 is being placed, one by one, like a conveyor belt, into the block, being multiplied against itself, and then being dispersed into a list (aka array).</p>
+
+<p>In order for classes (please see my previous post on classes) to be able to sort and traverse through data, the Enumerable Module is needed, to which . map belongs. To reiterate (haha) what was said before, the . map method organizes, but also stores for later use, the results of whatever was sent on the conveyor belt and into the iterating method.</p>
+
+<p>The . map method always returns an array, and the returned array is always the same size as the original array was before being iterated through the block. The most important thing to note, however, is that what matters most about . map is its return value. It returns a new object: a mapping of the original object to a new object.</p>
+
+<p>Another method used very often when iterating through data is ". each". The big difference here is that although it instructs the block to act upon everything placed onto the conveyor belt, it doesn't save or store any of the outcomes, nor does it organize them. It isn't better or worse that the . map command, it just depends on how you want the data to flow.</p>
+	</div>
+
+	<div class="Clear"></div>
+
+</div>
+</body>
+</html>
