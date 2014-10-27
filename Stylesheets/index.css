@@ -92,3 +92,9 @@ div {
 	float: right;
 	padding-top: 15px;
 }
+
+.fourthleft {
+	width: 400px;
+	float: left;
+	padding-top: 15px;
+}
