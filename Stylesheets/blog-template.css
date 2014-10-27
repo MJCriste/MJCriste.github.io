@@ -5,7 +5,7 @@ body {
 .MainContainer {
 	width: 90%;
 	max-width: 1080px;
-	border: solid black 18px;
+	border: solid black 25px;
 	margin: 0 auto;
 }
 
@@ -26,6 +26,11 @@ margin-bottom: 16px;
 	color: #FF0000;
 }
 
+.Sidebar li {
+	padding-bottom: 5px;
+	font: bold;
+}
+
 .Clear {
 	clear: both;
 }
@@ -36,18 +41,20 @@ margin-bottom: 16px;
 }
 
 .BlogContent img {
-	width: 65%;
+	width: 55%;
 	height: auto;
-	border: gray solid 10px;
+	border: gray solid 18px;
 }
 
 .Header h2 {
 	font-family: Courier;
 	padding-left: 3%;
-	font-size: 45px;
-	padding-top: -35px;
+	font-size: 50px;
+	padding-top: -45px;
+	font: bold;
 }
 
 a {
 	color: #FF0000;
+	font: bold;
 }
