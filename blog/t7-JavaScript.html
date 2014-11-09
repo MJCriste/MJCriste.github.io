@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Binary World</title>
+	<link rel="stylesheet" type="text/css" href="../Stylesheets/blog-template.css"/>
+</head>
+<body>
+<div class="MainContainer">
+	<div class="Header">
+		<h2>Binary World</h2>
+		<div class="SocialMedia"></div>
+	</div>
+	<div class="Sidebar">
+		<ul><strong>
+			<li><a href="">11110111010</a></li>
+			<li><a href="">The Culture at DBC</a></li>
+			<li><a href="">11111000001</a></li>
+			<li><a href="">What's Your Learning Style?</a></li>
+			<li><a href="">11111001010</a></li>
+			<li><a href="">Response to Peer Feedback</a></li>
+			<li><a href="">11111001100</a></li>
+			<li><a href="">Berkshire Replica</a></li>
+			<li><a href="">11111010000</a></li>
+			<li><a href="">Arrays and Hashes</a></li>
+			<li><a href="">11111010100</a></li>
+			<li><a href="">The Enumerable Method ".map"</a></li>
+			<li><a href="">11111010111</a></li>
+			<li><a href="">Intro to Git</a></li>
+			<li><a href="">11111011001</a></li>
+			<li><a href="">Ruby Classes</a></li>
+			<li><a href="">11111011110</a></li>
+			<li><a href="">The Power of Big Data</a></li>
+			<li><a href="">11111100010</a></li>
+			<li><a href="">11111100111</a></li>
+			<li><a href="">11111101100</a></li>
+			<li><a href="">11111110001</a></li>
+
+		</strong></ul>
+	</div>
+	<div class="BlogContent">
+		<img src="images/imgres.jpg"/>
+		<p>
+<h4>Ruby classes vs. JavaScript constructor functions</h4>
+
+<p>Javascript and Ruby provide a similar method for creating objects. They both require the interaction of other objects to create a new object, emphasizing how ubiquitous objects are in both languages. The important difference is that the type of objects and interactions involved is different in both languages. Ruby uses objects inherited from Class to create new objects, whereas JavaScript can either define literal objects, or invoke constructor functions (which are in turn objects themselves) to create new objects.</p> 
+
+<p>Javascript allows the creation of new objects with shared behaviour via Function.prototype, the idea that new objects reference the prototype object of the constructor function, thus inheriting its behaviour. In Ruby, this is achieved through class objects and method definitions.</p>
+
+<h5>JavaScript constructor function example:</h5>
+
+<p>var Athlete = function(name, age, sport, quote){</p>
+  <p>this.name = name;</p>
+  <p>this.age = age;</p>
+  <p>this.sport = sport;</p>
+  <p>this.quote = quote;</p>
+<p>}</p>
+
+<p>var michaelPhelps = new Athlete("Michael Phelps", 29, "swimming", "It's medicinal I swear!")</p>
+<p>console.log(michaelPhelps.constructor === Athlete)</p>
+<p>console.log(michaelPhelps.name + " " + michaelPhelps.sport + " " + michaelPhelps.quote)</p>
+
+<h5>Ruby class:</h5>
+
+<p>class Class<p>
+   <p>alias oldNew  new</p>
+   <p>def new(*args)</p>
+     <p>print "Creating a new ", self.name, "\n"</p>
+     <p>oldNew(*args)</p>
+   <p>end</p>
+ <p>end</p>
+
+ <p>class Name</p>
+ <p>end</p>
+
+ <p>n = Name.new</p>
+	</div>
+
+	<div class="Clear"></div>
+
+</div>
+</body>
+</html>
