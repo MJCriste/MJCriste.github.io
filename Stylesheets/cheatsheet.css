@@ -1,0 +1,55 @@
+body {
+  color: black;
+  background-color: #CCE6FF;
+}
+
+.MainContainer {
+  width: 95%;
+  height: 95%;
+  max-width: 1080px;
+  margin: auto;
+  border: 20px solid black;
+}
+
+.Header {
+  font-size: 2em;
+  font-weight:bold;
+  width: 90%;
+  height: 50%;
+  text-align: center;
+  margin:auto;
+  /*border-bottom: 1px solid black;*/
+  /*padding: 10px;*/
+}
+
+img {
+width: 70%;
+height: auto;
+}
+
+.LeftColumn {
+  width: 32%;
+  float: left;
+  border: 1px solid black;
+  margin:auto;
+  padding: 5px;
+}
+
+.CenterColumn {
+  width: 32%;
+  float: left;
+  /*border: 1px solid black*/
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  margin:auto;
+  padding: 5px;
+}
+
+.RightColumn {
+  width: 32%;
+  float: right;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  margin:auto;
+  padding: 5px;
+}

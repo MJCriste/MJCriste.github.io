@@ -2,241 +2,107 @@
 <html>
 <head>
 	<title>CSS Positioning: Cheatsheet</title>
-	<link rel="stylesheet" type="text/css" href="../Stylesheets/cheatsheet.css"/>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/cheatsheet.css"/>
 	</head>
+
 	<body>
+
 	<div class="MainContainer">
 		<div class="Header">
 			<h4>CSS Positioning</h4>
-			</div>
+		</div>
+
 		<div class="LeftColumn">
+		<strong><h2>Selectors</h2></strong>
+		<p>div -					all DIV tags</p>
+		<p>div, span -			all DIV tags and all SPAN tags</p>
+		<p>div span	-			all SPAN tags inside DIVs</p>
+		<p>#content	-			element with ID “content”</p>
+		<p>.box	-				all elements with CLASS “box”</p>
+		<p>ul#box -				UL tag with ID 'box'</p>
+		<p>span.box -			all SPAN tags with CLASS “box”</p>
+		<p>* -					all elements</p>
+		<p>#box * -				all elements inside #box</p>
+		<p>a:link, a:active,	links in normal state, in clicked state,</p>
+		<p>a:visited			and in visited state</p>
+		<p>a:hover -			link with mouse over it</p>
+		<p>div > span -			all SPANs one-level deep in a DIV</p>
 
-			<strong><h2>Blocs, Procs, and Lambdas</h2></strong>
+			<strong><h2>Positioning</h2></strong>
 
-			<h4>Learning to Yield:</h4>
-			<p>Why do some methods accept a block and others don't? It's because methods that accept blocks have a way of transferring control from the calling method to the block and back again. This can be built into the methods defined by using the yield keyword.</p>
-
-			<h4>Keeping the Code DRY</h4>
-			<p>Most everything is an object in Ruby. Blocks, however, are not objects, and this is one of the very few exceptions to the "everything is an object" rule in Ruby.</p>
-
-			<p>Because of this, blocks can't be saved to variables and don't have all the powers and abilities of a real object. For that, you need procs.</p>
-
-			<p>You can think of a proc as a "saved" block: just like you can give a bit of code a name and turn it into a method, you can name a block and turn it into a proc. Procs are great for keeping your code DRY, which stands for Don't Repeat Yourself. With blocks, you have to write your code out each time you need it; with a proc, you write your code once and can use it many times.</p>
-
-			<h4>Proc Syntax</h4>
-			<p>Procs are easy to define. You just call Proc.new and pass in the block you want to save. Here's how to create a proc called cube that cubes a number (raises it to the third power):</p>
-
-			<p>cube = Proc.new { |x| x ** 3 }</p>
-
-			<p>You can then pass the proc to a method that would otherwise take a block, and you don't have to rewrite the block over and over.</p>
-
-			<p>[1, 2, 3].collect!(&cube)</p>
-			<p># ==> [1, 8, 27]</p>
-			<p>[4, 5, 6].map!(&cube)</p>
-			<p># ==> [64, 125, 216]</p>
-
-			<p>(The .collect! and .map! methods do the exact same thing.)</p>
-
-			<p>The & is used to convert the cube proc into a block (since .collect! and .map! normally take a block). This gets done any time you pass a proc to a method that expects a block.</p>
-
-			<h4>Why Procs?</h4>
-			<p>Why bother saving our blocks as procs? There are two main advantages:</p>
-
-			<p>Procs are full-fledged objects, so they have all the powers and abilities of objects. Blocks don't.</p>
-
-			<p>Unlike blocks, procs can be called over and over without rewriting them. This prevents you from having to retype the contents of your block every time you need to execute a particular bit of code.</p>
-
-			<p>Calling a proc with a method isn't too tricky. However, there's an even easier way.</p>
-
-			<p>Unlike blocks, we can call procs directly by using Ruby's .call method:</p>
-
-			<p>test = Proc.new { # does something }</p>
-			<p>test.call</p>
-			<p># does that something</p>
-
-			<h4>Symbols and Procs</h4>
-			<p>In addition to the methods used above you can also convert symbols to procs using &:</p>
-
-			<p>strings = ["1", "2", "3"]</p>
-			<p>nums = strings.map(&:to_i)</p>
-			<p># ==> [1, 2, 3]</p>
-
-			<p>By mapping &:to_i over every element of strings, you can turn each string into an integer.</p>
-
-			<h4>The Ruby Lambda</h4>
-			<p>Like procs, lambdas are objects. The similarities don't stop there: with the exception of a bit of syntax and a few behavioral quirks, lambdas are identical to procs:</p>
-
-			<p>lambda { puts "Hello!" }</p>
-
-			<p>Is just about the same as</p>
-
-			<p>Proc.new { puts "Hello!" }</p>
-
-			<h4>Lambda Syntax</h4>
-			Lambdas are defined using the following syntax:
-
-			<p>lambda { |param| block }</p>
-			<p>Lambdas are useful in the same situations in which you'd use a proc.</p> 
-
-			<h4>Lambdas vs. Procs</h4>
-			Procs and lambdas are very similar. There are only two main differences.
-
-			<p>First, a lambda checks the number of arguments passed to it, while a proc does not. This means that a lambda will throw an error if you pass it the wrong number of arguments, whereas a proc will ignore unexpected arguments and assign nil to any that are missing.</p>
-
-			<p>Second, when a lambda returns, it passes control back to the calling method; when a proc returns, it does so immediately, without going back to the calling method.</p>
+		<p>position            	places elements on screen, e.g.
+								absolute, fixed, relative</p>
+		<p>float				stacks elements horizontally in a
+								particular direction, e.g. left</p>
+		<p>top, left, right, 	specifies the offsets used in absolute,
+		<p>bottom				fixed, and relative positions, e.g.
+								top:10px;left:10px</p>
+		<p>display				sets how the element is placed in the
+								doc flow, e.g. block, inline, none</p>
+		<p>z-index				sets the stacking order of elements,
+								e.g. z-index of 1 is below z-index of 2</p>
+		<p>	overflow			sets what happens to content outside
+								of container, e.g. auto, hidden</p>
 
 		</div>
 
 		<div class="CenterColumn">
-			h4>Learning to Yield:</h4>
-			<p>Why do some methods accept a block and others don't? It's because methods that accept blocks have a way of transferring control from the calling method to the block and back again. This can be built into the methods defined by using the yield keyword.</p>
+			<strong><h2>Box Model </h2></strong>
 
-			<h4>Keeping the Code DRY</h4>
-			<p>Most everything is an object in Ruby. Blocks, however, are not objects, and this is one of the very few exceptions to the "everything is an object" rule in Ruby.</p>
+			<img src="images/box_model.png"</>
 
-			<p>Because of this, blocks can't be saved to variables and don't have all the powers and abilities of a real object. For that, you need procs.</p>
+			<strong><h2>Text</h2></strong>
 
-			<p>You can think of a proc as a "saved" block: just like you can give a bit of code a name and turn it into a method, you can name a block and turn it into a proc. Procs are great for keeping your code DRY, which stands for Don't Repeat Yourself. With blocks, you have to write your code out each time you need it; with a proc, you write your code once and can use it many times.</p>
-
-			<h4>Proc Syntax</h4>
-			<p>Procs are easy to define. You just call Proc.new and pass in the block you want to save. Here's how to create a proc called cube that cubes a number (raises it to the third power):</p>
-
-			<p>cube = Proc.new { |x| x ** 3 }</p>
-
-			<p>You can then pass the proc to a method that would otherwise take a block, and you don't have to rewrite the block over and over.</p>
-
-			<p>[1, 2, 3].collect!(&cube)</p>
-			<p># ==> [1, 8, 27]</p>
-			<p>[4, 5, 6].map!(&cube)</p>
-			<p># ==> [64, 125, 216]</p>
-
-			<p>(The .collect! and .map! methods do the exact same thing.)</p>
-
-			<p>The & is used to convert the cube proc into a block (since .collect! and .map! normally take a block). This gets done any time you pass a proc to a method that expects a block.</p>
-
-			<h4>Why Procs?</h4>
-			<p>Why bother saving our blocks as procs? There are two main advantages:</p>
-
-			<p>Procs are full-fledged objects, so they have all the powers and abilities of objects. Blocks don't.</p>
-
-			<p>Unlike blocks, procs can be called over and over without rewriting them. This prevents you from having to retype the contents of your block every time you need to execute a particular bit of code.</p>
-
-			<p>Calling a proc with a method isn't too tricky. However, there's an even easier way.</p>
-
-			<p>Unlike blocks, we can call procs directly by using Ruby's .call method:</p>
-
-			<p>test = Proc.new { # does something }</p>
-			<p>test.call</p>
-			<p># does that something</p>
-
-			<h4>Symbols and Procs</h4>
-			<p>In addition to the methods used above you can also convert symbols to procs using &:</p>
-
-			<p>strings = ["1", "2", "3"]</p>
-			<p>nums = strings.map(&:to_i)</p>
-			<p># ==> [1, 2, 3]</p>
-
-			<p>By mapping &:to_i over every element of strings, you can turn each string into an integer.</p>
-
-			<h4>The Ruby Lambda</h4>
-			<p>Like procs, lambdas are objects. The similarities don't stop there: with the exception of a bit of syntax and a few behavioral quirks, lambdas are identical to procs:</p>
-
-			<p>lambda { puts "Hello!" }</p>
-
-			<p>Is just about the same as</p>
-
-			<p>Proc.new { puts "Hello!" }</p>
-
-			<h4>Lambda Syntax</h4>
-			Lambdas are defined using the following syntax:
-
-			<p>lambda { |param| block }</p>
-			<p>Lambdas are useful in the same situations in which you'd use a proc.</p> 
-
-			<h4>Lambdas vs. Procs</h4>
-			Procs and lambdas are very similar. There are only two main differences.
-
-			<p>First, a lambda checks the number of arguments passed to it, while a proc does not. This means that a lambda will throw an error if you pass it the wrong number of arguments, whereas a proc will ignore unexpected arguments and assign nil to any that are missing.</p>
-
-			<p>Second, when a lambda returns, it passes control back to the calling method; when a proc returns, it does so immediately, without going back to the calling method.</p>
+		<p>font-family            	font used, e.g. Helvetica, Arial</p>
+		<p>font-size				text size, e.g. 60px, 3em</p>
+		<p>color 	text color, e.g. #000, #abcdef</p>
+		<p>font-weight				how bold the text is, e.g. bold</p>
+		<p>font-style				what style the text is, e.g. italic</p>
+		<p>	text-decoration			sets a variety of effects on text, e.g.
+		underline, overline, none</p>
+		<p>text-align            	how text is aligned, e.g. center</p>
+		<p>line-height				spacing between lines, e.g. 2em</p>
+		<p>letter-spacing 	spacing between letters, e.g. 5px</p>
+		<p>text-indent				indent of the first line, e.g. 2em</p>
+		<p>text-transform				applies formatting to text, e.g.uppercase, lowercase, captialize</p>
+		<p>	vertical-align			align relative to baseline, e.g. text-top</p>
 
 		</div>
 
 		<div class="RightColumn">
-			h4>Learning to Yield:</h4>
-			<p>Why do some methods accept a block and others don't? It's because methods that accept blocks have a way of transferring control from the calling method to the block and back again. This can be built into the methods defined by using the yield keyword.</p>
+			<strong><h2>Borders and Lists</h2></strong>
 
-			<h4>Keeping the Code DRY</h4>
-			<p>Most everything is an object in Ruby. Blocks, however, are not objects, and this is one of the very few exceptions to the "everything is an object" rule in Ruby.</p>
+				<p> borders       	sets border style for all borders, in
+									the format: border: (solid, dashed,
+									dotted, double) (width) (color), e.g.
+									border: solid 1px #000</p>
+				<p> border-top, 	sets border style for a specific
+					-bottom, 		border (same property syntax used
+					-left, 			for padding and margin, e.g.
+					-right     		margin-left)</p>
 
-			<p>Because of this, blocks can't be saved to variables and don't have all the powers and abilities of a real object. For that, you need procs.</p>
+				<p>list-style-type     sets style of bullets, e.g. square</p>
+				<p>list-style-position     sets how text wraps when bulleted,</p>
+				e.g. outside, inside </p>
+				<p> list-style-image       sets an image for a bullet, e.g.
+				list-style-image:url(bullet.png)</p>
 
-			<p>You can think of a proc as a "saved" block: just like you can give a bit of code a name and turn it into a method, you can name a block and turn it into a proc. Procs are great for keeping your code DRY, which stands for Don't Repeat Yourself. With blocks, you have to write your code out each time you need it; with a proc, you write your code once and can use it many times.</p>
+			<strong><h2>Everything Else</h2></strong>
 
-			<h4>Proc Syntax</h4>
-			<p>Procs are easy to define. You just call Proc.new and pass in the block you want to save. Here's how to create a proc called cube that cubes a number (raises it to the third power):</p>
+		<p>background            	sets background of an element, in the
+									format: background: (color) (image)
+									(repeat) (position), e.g. background:
+									#000 url(bg.png) repeat-x top left</p>
+		<p>cursor					sets shape of cursor, e.g. pointer</p>
+		<p>outline 					a border drawn around an element
+									that doesn’t affect the box model</p>
+		<p>border-collapse			sets how borders within tables
+									behave, e.g. collapse</p>
+		<p>clear					sets on what side a new line starts in
+									relation to nearby floated elements,
+									e.g. left, right, both</p>
 
-			<p>cube = Proc.new { |x| x ** 3 }</p>
-
-			<p>You can then pass the proc to a method that would otherwise take a block, and you don't have to rewrite the block over and over.</p>
-
-			<p>[1, 2, 3].collect!(&cube)</p>
-			<p># ==> [1, 8, 27]</p>
-			<p>[4, 5, 6].map!(&cube)</p>
-			<p># ==> [64, 125, 216]</p>
-
-			<p>(The .collect! and .map! methods do the exact same thing.)</p>
-
-			<p>The & is used to convert the cube proc into a block (since .collect! and .map! normally take a block). This gets done any time you pass a proc to a method that expects a block.</p>
-
-			<h4>Why Procs?</h4>
-			<p>Why bother saving our blocks as procs? There are two main advantages:</p>
-
-			<p>Procs are full-fledged objects, so they have all the powers and abilities of objects. Blocks don't.</p>
-
-			<p>Unlike blocks, procs can be called over and over without rewriting them. This prevents you from having to retype the contents of your block every time you need to execute a particular bit of code.</p>
-
-			<p>Calling a proc with a method isn't too tricky. However, there's an even easier way.</p>
-
-			<p>Unlike blocks, we can call procs directly by using Ruby's .call method:</p>
-
-			<p>test = Proc.new { # does something }</p>
-			<p>test.call</p>
-			<p># does that something</p>
-
-			<h4>Symbols and Procs</h4>
-			<p>In addition to the methods used above you can also convert symbols to procs using &:</p>
-
-			<p>strings = ["1", "2", "3"]</p>
-			<p>nums = strings.map(&:to_i)</p>
-			<p># ==> [1, 2, 3]</p>
-
-			<p>By mapping &:to_i over every element of strings, you can turn each string into an integer.</p>
-
-			<h4>The Ruby Lambda</h4>
-			<p>Like procs, lambdas are objects. The similarities don't stop there: with the exception of a bit of syntax and a few behavioral quirks, lambdas are identical to procs:</p>
-
-			<p>lambda { puts "Hello!" }</p>
-
-			<p>Is just about the same as</p>
-
-			<p>Proc.new { puts "Hello!" }</p>
-
-			<h4>Lambda Syntax</h4>
-			Lambdas are defined using the following syntax:
-
-			<p>lambda { |param| block }</p>
-			<p>Lambdas are useful in the same situations in which you'd use a proc.</p> 
-
-			<h4>Lambdas vs. Procs</h4>
-			Procs and lambdas are very similar. There are only two main differences.
-
-			<p>First, a lambda checks the number of arguments passed to it, while a proc does not. This means that a lambda will throw an error if you pass it the wrong number of arguments, whereas a proc will ignore unexpected arguments and assign nil to any that are missing.</p>
-
-			<p>Second, when a lambda returns, it passes control back to the calling method; when a proc returns, it does so immediately, without going back to the calling method.</p>
-		</div>
-		<div class="Footer">
-			<h4>CSS Positioning</h4>
-			</div>
-		</body>
-		</html>
+</div>
+</div>
+</body>
+</html>

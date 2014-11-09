@@ -122,3 +122,9 @@ div {
 	float: left;
 	padding-top: 15px;
 }
+
+.fifthright {
+	width: 100px;
+	float: right;
+	padding-top: 15px;
+}
